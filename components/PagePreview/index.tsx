@@ -1,4 +1,4 @@
-import PublishedPage from "@/components/PublishedPage";
+import PageComponents from "@/components/PageComponents";
 import Link from "next/link";
 
 import { usePreview } from "@/sanity/lib/sanity.preview";
@@ -13,7 +13,7 @@ export default function PagePreview({ query, queryParams }: PagePreviewProps) {
 
   return (
     <>
-      <PublishedPage components={pageData[0]?.components || []} />
+      <PageComponents components={pageData[0]?.components || []} />
       <Link
         className="bg-blue-500 py-6 px-8 text-white font-bold fixed bottom-0 right-0 rounded-tl"
         href="/api/exit-preview"

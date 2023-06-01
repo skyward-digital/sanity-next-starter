@@ -1,4 +1,4 @@
-import PublishedPage from "@/components/PublishedPage";
+import PageComponents from "@/components/PageComponents";
 import Component from "@/types/Component";
 import { PreviewSuspense } from "next-sanity/preview";
 import { lazy } from "react";
@@ -18,7 +18,7 @@ const Page = ({ preview, components, query, queryParams }: PageProps) => {
       <PagePreview query={query} queryParams={queryParams} />
     </PreviewSuspense>
   ) : (
-    <PublishedPage components={components} />
+    <PageComponents components={components} />
   );
 };
 
