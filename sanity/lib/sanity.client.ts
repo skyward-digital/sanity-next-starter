@@ -8,5 +8,6 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: true,
+  // ensures that content is updated in real time
+  useCdn: false,
 });
