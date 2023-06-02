@@ -5,9 +5,9 @@ type HeroProps = {
 
 export default function Hero({ heading, tagline }: HeroProps) {
   return (
-    <div className="bg-gray-200 p-6 text-center">
-      <h1 className="mb-5 text-5xl">{heading}</h1>
-      <h2>{tagline}</h2>
+    <div className="bg-gray-200 p-12 text-center">
+      <h1 className="mb-6 text-6xl">{heading}</h1>
+      <h2 className="text-lg font-light">{tagline}</h2>
     </div>
   );
 }

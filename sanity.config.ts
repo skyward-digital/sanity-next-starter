@@ -1,22 +1,26 @@
-// This file defines everything about our Sanity project
+/* This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route */
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
-import schemas from "@/sanity/schemas";
-import { apiVersion, dataset, projectId } from "@/sanity/lib/sanity.client";
-import { defaultDocumentNode } from "@/sanity/structure";
 import { visionTool } from "@sanity/vision";
 
+// See https://www.sanity.io/docs/api-versioning for how versioning works
+import { apiVersion, dataset, projectId } from "@/sanity/env";
+import schemas from "@/sanity/schemas";
+import { defaultDocumentNode } from "@/sanity/structure";
+
 const config = defineConfig({
-  projectId: projectId,
-  dataset: dataset,
-  apiVersion: apiVersion,
-  title: "Sanity Page Builder",
-  // Where the Sanity Studio can be accessed
-  // You can change this but you will need to change the /studio folder name in the /pages directory
+  // Path to access Sanity Studio. You can change it but you'll need to change the corresponding folder name in the /pages directory
   basePath: "/studio",
-  // The vision tool can be configured to only be visible on dev and/or just for admin users
-  // Documentation: https://www.sanity.io/plugins/vision
-  plugins: [deskTool({ defaultDocumentNode }), visionTool()],
+  projectId,
+  dataset,
+  apiVersion,
+  title: "Sanity Page Builder",
+  plugins: [
+    deskTool({ defaultDocumentNode }),
+    // Vision lets you query your content with GROQ in the studio
+    // Documentation: https://www.sanity.io/docs/the-vision-plugin
+    visionTool({ defaultApiVersion: apiVersion }),
+  ],
   schema: { types: schemas },
 });
 
