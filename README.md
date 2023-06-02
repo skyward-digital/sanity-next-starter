@@ -1,38 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Introduction
 
-## Getting Started
+Hey 👋 thanks for taking the time to look through our resources!
 
-First, run the development server:
+Welcome to our Page Builder Starter Project, a simple and effective tool powered by Next.js and Sanity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+With this setup, you can create web pages, add and customise components, and reorder them to your liking, all directly in Sanity Studio. What's more, you get to see your changes in real time with the live preview feature, all without needing to write any code.
+
+# Getting Started
+
+To use our starter project, you'll need to clone this GitHub repository locally and open it up in your favourite code editor.
+
+## Install dependencies
+
+We use npm to install our dependencies
+
+`npm install`
+
+## Sanity set up
+
+You will need a Sanity account and Sanity project for the project to work.
+
+If you don't have one already, [create a Sanity account](https://www.sanity.io/get-started/create-project?ref=navbar&originUrl=https%3A%2F%2Fwww.sanity.io%2F). A Sanity project is automatically created during the account set up.
+
+Navigate to [https://www.sanity.io/manage](https://www.sanity.io/manage) and click on the Sanity project that you'd like to use, or create a new one.
+
+Click the **API** tab and locate the **CORS Origin** heading. Here, add http://localhost:3000 to the CORS Origin, tick the 'Allow credentials' box, then hit Save. This step ensures that our Next.js project can access Sanity Studio. Remember to revisit this page when you deploy your project, so you can add your production URL.
+
+Make a note of the **Project Id** on the homepage for the Sanity project.
+
+## Environment settings
+
+We use environment variables to set things up.
+
+Create `.env.local` file at the root of the project and paste the following into it, replacing `your-project-id` with the Project Id of your Sanity project and `todays-date` with today's date in the format YYYY-MM-DD:
+
+```
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=todays-date
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Note:** You'll also need to use these for any deployment, including on GitHub.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Running your code
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Once you're set up, you can run your code through the development server
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Navigate to http://localhost:3000 to view the website. For now it will be a blank page.
 
-## Learn More
+## Using Sanity Studio
 
-To learn more about Next.js, take a look at the following resources:
+Navigate to http://localhost:3000/studio to view the Sanity Studio.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Log into Sanity using the same login method as the account you used in your set up.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Here, you can add pages and components and preview the changes before publishing.
