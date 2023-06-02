@@ -1,4 +1,4 @@
-import CallToAction from "@/components/CallToAction";
+import CallToActionButton from "@/components/CallToActionButton";
 import Hero from "@/components/Hero";
 import Component from "@/types/Component";
 import NoComponentsMessage from "../NoComponentsMessage";
@@ -6,7 +6,7 @@ import NoComponentsMessage from "../NoComponentsMessage";
 // Mapping Sanity components to React components
 const componentMap: Record<Component["_type"], React.ComponentType<any>> = {
   hero: Hero,
-  callToAction: CallToAction,
+  callToAction: CallToActionButton,
 };
 
 type PageComponentsProps = {
