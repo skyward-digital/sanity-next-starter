@@ -8,8 +8,8 @@
     "start": "next start",
     "format": "prettier --write \"{.storybook,app,components,context,docs,pages,storyblok,styles,utils}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}\"",
     "format:check": "prettier --check '{.storybook,app,components,context,docs,pages,storyblok,styles,utils}/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}'",
-    "lint": "eslint --fix '{app,components,context,hooks,pages,storyblok,utils}/**/*.js'",
-    "lint:check": "eslint '{app,components,context,hooks,pages,storyblok,utils}/**/*.js'"
+    "lint": "eslint --fix '{components,pages,}/**/*.{js,ts}'",
+    "lint:check": "eslint '{components,pages,}/**/*.{js,ts}'"
   },
   "dependencies": {
     "@sanity/vision": "3.11.5",
