@@ -109,8 +109,6 @@ const page = {
 
 Replace `yourNewComponent` with the actual type of your new schema. This allows the new component to be used in the page building process within Sanity Studio.
 
-**TODO & DISCUSS: improve Types organisation so it makes it simpler for people to add new components and expand instructions**
-
 ## Live Preview
 
 This project is configured with Live Preview where you can see your changes in real-time within Sanity Studio. This is part of `next-sanity` and you can read more about how it works in [their documentation](https://github.com/sanity-io/next-sanity#next-sanitypreview-live-real-time-preview).
