@@ -1,13 +1,12 @@
-type HeroProps = {
-  heading: string;
-  tagline: string;
-};
+import Hero from "@/types/Hero";
 
-export default function Hero({ heading, tagline }: HeroProps) {
+export default function Hero({ heading, tagline }: Hero) {
   return (
-    <div className="bg-gray-200 p-12 text-center">
-      <h1 className="mb-6 text-6xl">{heading}</h1>
-      <h2 className="text-lg font-light">{tagline}</h2>
-    </div>
+    <section className="bg-gray-200">
+      <div className="max-w-4xl mx-auto px-10 py-16">
+        <h1 className="mb-6 text-6xl">{heading}</h1>
+        <p className="text-lg font-light">{tagline}</p>
+      </div>
+    </section>
   );
 }

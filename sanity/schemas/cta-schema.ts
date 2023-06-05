@@ -3,7 +3,9 @@ const cta = {
   title: "Call to Action",
   type: "object",
   fields: [
-    { name: "linkText", title: "Link Text", type: "string" },
+    { name: "title", title: "Title", type: "string" },
+    { name: "description", title: "Description", type: "string" },
+    { name: "buttonText", title: "Button text", type: "string" },
     { name: "url", title: "URL", type: "url" },
   ],
 };

@@ -1,7 +1,9 @@
 type CallToAction = {
   _key: string;
   _type: "callToAction";
-  linkText: string;
+  title: string;
+  description: string;
+  buttonText: string;
   url: string;
 };
 
