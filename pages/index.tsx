@@ -25,7 +25,7 @@ const Homepage = ({ preview, components, queryParams }: HomepageProps) => {
 
 export async function getStaticProps({ preview = false, queryParams = null }) {
   if (preview) {
-    return { props: { preview, components: [], queryParams } };
+    return { props: { preview, components: [], queryParams }, revalidate: 300 };
   }
   const pageData = await client.fetch(query);
 
@@ -35,6 +35,7 @@ export async function getStaticProps({ preview = false, queryParams = null }) {
       preview,
       queryParams,
     },
+    revalidate: 300
   };
 }
 
