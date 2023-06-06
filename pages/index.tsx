@@ -35,7 +35,7 @@ export async function getStaticProps({ preview = false, queryParams = null }) {
       preview,
       queryParams,
     },
-    revalidate: 300
+    revalidate: 300,
   };
 }
 

@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async ({
   if (preview) {
     return {
       props: { preview, components: [], queryParams },
-      revalidate: 300
+      revalidate: 300,
     };
   }
 
@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps = async ({
       preview,
       queryParams: null,
     },
-    revalidate: 300
+    revalidate: 300,
   };
 };
 
