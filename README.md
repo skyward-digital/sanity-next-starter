@@ -14,9 +14,9 @@ To use our starter project, you'll need to clone this GitHub repository locally 
 
 ## Install dependencies
 
-We use npm to install our dependencies
+We use pnpm to install our dependencies
 
-`npm install`
+`pnpm install`
 
 ## Sanity set up
 
@@ -46,7 +46,7 @@ NEXT_PUBLIC_SANITY_API_VERSION=todays-date
 Once you're set up, you can run your code through the development server
 
 ```
-npm run dev
+pnpm run dev
 ```
 
 Navigate to http://localhost:3000 to view the website. For now it will be a blank page.
